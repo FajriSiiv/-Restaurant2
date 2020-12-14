@@ -1,0 +1,246 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 2px;
+  background-color: rgb(112, 112, 112);
+}
+.slide {
+  transform: translateX(0) !important;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+}
+header {
+  position: fixed;
+  width: 100vw;
+  height: fit-content;
+  background-color: transparent;
+  z-index: 99;
+}
+.main-nav {
+  justify-content: flex-end;
+  display: flex;
+  transition: 0.5s;
+}
+.main-nav a {
+  margin: 15px 20px;
+  color: rgb(0, 0, 0);
+  transition: 0.3s;
+  font-weight: 500;
+}
+.main-nav a:hover,
+.main-nav a:focus {
+  color: rgb(255, 132, 132);
+}
+.carousel {
+  width: 100vw;
+  height: 100vh;
+}
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.car-oi {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  padding: 0 50px;
+}
+.car-oi .text-content {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 50%;
+  flex-direction: column;
+  position: relative;
+}
+.car-oi .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.carousel-item {
+  font-family: "Poppins";
+}
+.car-oi h1 {
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.car-oi h4 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.car-oi p {
+  font-size: 15px;
+  width: 85%;
+  line-height: 30px;
+  font-family: "Montserrat";
+  font-weight: 450;
+}
+.carousel-item:first-child {
+  background-color: rgb(255, 247, 172);
+}
+.carousel-item:first-child:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: #f88a8a; */
+  background: url("wave01.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  /* clip-path: polygon(50% 0, 0 0, 0 100%, 50% 100%); */
+}
+.carousel-item:nth-child(2) {
+  background-color: rgb(143, 143, 250);
+}
+
+.carousel-item:nth-child(2):before {
+  content: "";
+  background-color: #ffc392;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: block;
+  z-index: -1;
+  clip-path: circle(30% at 50% 50%);
+}
+.carousel-item:nth-child(3) {
+  background-color: rgb(165, 250, 143);
+}
+.carousel-item:nth-child(3):before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  z-index: -1;
+  clip-path: polygon(100% 0, 45% 0, 100% 100%);
+}
+.carousel a i.fa {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+.carousel-control-next,
+.carousel-control-prev {
+  bottom: 40px;
+  align-items: flex-end;
+  width: 8%;
+}
+@media (max-width: 900px) {
+  .car-oi h1 {
+    font-size: 30px;
+  }
+  .car-oi h4 {
+    font-size: 20px;
+  }
+  .car-oi p {
+    font-size: 12px;
+    width: 100%;
+  }
+  .car-oi img {
+    width: 450px;
+  }
+  .carousel-item:nth-child(2) img {
+    width: 300px;
+  }
+  .carousel-item:first-child:before {
+    background-position: center 100px;
+  }
+  .carousel-item:nth-child(3) .car-oi img {
+    width: 350px;
+  }
+}
+@media (max-width: 576px) {
+  .carousel-item .car-oi {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+  .car-oi .text-content,
+  .car-oi .img {
+    width: 100%;
+  }
+  .car-oi .img img {
+    width: 300px;
+  }
+  .carousel-item:first-child .car-oi img {
+    width: 350px;
+  }
+  .carousel-item:nth-child(3) .img img {
+    width: 230px;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    align-items: center;
+    width: 20%;
+  }
+  .car-oi .text-content {
+    text-align: justify;
+    position: relative;
+    width: 90vw;
+  }
+  .car-oi h1 {
+    font-size: 25px !important;
+  }
+  .car-oi h4 {
+    font-size: 17px !important;
+    line-height: 30px;
+    text-align: left;
+  }
+  .car-oi p {
+    font-size: 11px;
+  }
+  header .container {
+    height: fit-content;
+  }
+  header .container .main-nav {
+    position: absolute;
+    height: 100vh;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    background-color: rgb(214, 214, 214);
+    width: 50%;
+    left: 0;
+    text-align: center;
+    transform: translateX(-100%);
+    overflow-x: hidden;
+  }
+  header .main-nav a {
+    font-size: 12px !important;
+  }
+  .fa.fa-bars {
+    display: block !important;
+    padding: 10px 0;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 25px;
+    z-index: 999 !important;
+    cursor: pointer;
+  }
+}
